@@ -22,7 +22,7 @@ Start the server with
 npm run start
 ```
 
-On the client, add
+On the clients, add
 ```
 Server = http://<host>:<port>/$repo/os/$arch
 ```
@@ -31,3 +31,15 @@ at the top of `/etc/pacman.d/mirrorlist`
 Replace
 `<host>` with the IP address of your server (or `localhost` if you run it on the same machine) and
 `<port>` with the http port specified in `config.json` (default: 8080)
+
+
+This server redirects all requests to the mirror specified in `config.json`
+and saves a local copy of the file in `cacheDir`.
+When the next time the same file is requested, instead of asking the mirror for it,
+the local copy is given to the client.
+
+By default, only `*.pkg.tar.zst` and `*.pkg.tar.zst.sig` are cached (this can be changed in `config.json`).
+It is not recommended to include `*.db` here because the package database changes without the filename changing.
+
+To not get your disk at 100% somewhere in the future you can schedule a cron job to run
+[pkgcacheclean](https://aur.archlinux.org/packages/pkgcacheclean) every week/month.
