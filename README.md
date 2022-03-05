@@ -43,3 +43,4 @@ It is not recommended to include `*.db` here because the package database change
 
 To not get your disk at 100% somewhere in the future you can schedule a cron job to run
 [pkgcacheclean](https://aur.archlinux.org/packages/pkgcacheclean) every week/month.
+(Requires `cacheDir` to be set at pacman's cache dir `/var/cache/pacman/pkg/`)
