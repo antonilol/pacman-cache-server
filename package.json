@@ -1,0 +1,14 @@
+{
+  "name": "pacman-cache-server",
+  "scripts": {
+    "build": "tsc *.ts",
+    "start": "node server",
+    "dev": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21"
+  }
+}

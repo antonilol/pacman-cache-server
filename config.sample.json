@@ -1,0 +1,10 @@
+{
+  "port": 8080,
+  "mirror": "mirror.cj2.nl",
+  "mirrorPath": "/archlinux",
+  "cacheDir": "/var/cache/pacman/pkg/",
+  "cacheFiles": [
+    ".pkg.tar.zst",
+    ".pkg.tar.zst.sig"
+  ]
+}
