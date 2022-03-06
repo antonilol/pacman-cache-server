@@ -1,7 +1,7 @@
 # pacman-cache-server
 Caching pacman mirror for faster downloads at home
 
-### Install
+### Install from github
 
 ```bash
 git clone https://github.com/antonilol/pacman-cache-server.git
@@ -10,9 +10,21 @@ npm i
 npm run build
 ```
 
-Copy the sample config and edit it
+Copy the sample config and edit it (optional)
 ```bash
 cp config.sample.json config.json
+```
+
+### Install from AUR
+
+With an AUR helper, for example `yay`
+```bash
+yay -S pacman-cache-server-git
+```
+
+The config can be edited in `/usr/lib/pacman-cache-server-git/` and the server can be started with systemd with
+```
+systemctl start pacman-cache-server
 ```
 
 ### Usage
